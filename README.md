@@ -29,24 +29,24 @@ yarn serve
 
 ### How it works?
 
-`shadow-cljs` loads `main.cljs`, which requires code from local files in `src/`:
+`shadow-cljs` loads `main.cljs`, which requires code from local files with `["./main" :as app]`
 
 ```bash
-=>> tree cljs/
-cljs/
-└── main.cljs
-
-0 directories, 1 file
 =>> tree src/
 src/
 ├── container.js
+├── main.cljs
 └── main.js
 
-0 directories, 2 files
+0 directories, 3 files
 ```
 
 Notice that shadow-cljs server only watchs ClojureScript code, editing JavaScript does not trigger reloading.
 Also import syntax is slightly different(might be bugs?).
+
+### External Reading
+
+https://clojureverse.org/t/experimenting-bundling-javascript-projects-with-shadow-cljs/1178/3
 
 ### License
 

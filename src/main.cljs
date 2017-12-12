@@ -1,6 +1,6 @@
 
 (ns main
-  (:require ["app" :as app]))
+  (:require ["./main" :as app]))
 
 (defn main! []
   (app/main))
