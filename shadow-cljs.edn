@@ -1,0 +1,15 @@
+
+{:source-paths ["cljs/"]
+ :dependencies []
+ :builds {:app {:output-dir "target/"
+                :asset-path "."
+                :target :browser
+                :modules {:main {:entries [main]
+                                 :depends-on #{:lib}}
+                          :lib {:entries ["react" "react-dom"]}}
+                :js-options {:resolve {"app" {:target :file
+                                              :file "./src/main.js"}}}
+                :devtools {:after-load main/reload!
+                           :http-root "target/"
+                           :http-port 8080}
+                :release {:output-dir "dist/"}}}}

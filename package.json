@@ -1,0 +1,19 @@
+{
+  "name": "minimal-shadow-cljs-es6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "shadow-cljs": "^2.0.115"
+  },
+  "scripts": {
+    "watch": "shadow-cljs watch app",
+    "release": "shadow-cljs release app",
+    "index": "cp asset/index.html target",
+    "index-dist": "cp asset/index.html dist/",
+    "serve": "http-server dist/"
+  }
+}
