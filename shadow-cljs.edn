@@ -1,13 +1,12 @@
 
 {:source-paths ["src/"]
  :dependencies []
+ :dev-http {8080 "target/"}
  :builds {:app {:output-dir "target/"
                 :asset-path "."
                 :target :browser
                 :modules {:main {:entries [main]
                                  :depends-on #{:lib}}
                           :lib {:entries ["react" "react-dom"]}}
-                :devtools {:after-load main/reload!
-                           :http-root "target/"
-                           :http-port 8080}
+                :devtools {:after-load main/reload!}
                 :release {:output-dir "dist/"}}}}
